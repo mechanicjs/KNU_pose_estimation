@@ -1,9 +1,9 @@
-0번 mediapipe, opencv_python 모듈을 설치합니다
+0. mediapipe, opencv_python 모듈을 설치합니다
 
 1, 2, 3번 코드는 각각 캠을 출력하는 서로 다른 코드로
-1번은 웹캠 피드를 그대로 출력
-2번은 얼굴, 왼손, 오른손, 몸을 인식해서 point와 connection을 출력
-3번은 point와 connection 색을 변경하는 코드로
+1. 웹캠 피드를 그대로 출력
+2. 얼굴, 왼손, 오른손, 몸을 인식해서 point와 connection을 출력
+3. point와 connection 색을 변경하는 코드로
 각각 따로 실행해주시면 됩니다.
 
 mp_holistic.FACE_CONNECTIONS
