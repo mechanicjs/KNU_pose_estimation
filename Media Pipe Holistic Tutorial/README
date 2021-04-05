@@ -10,3 +10,7 @@ mp_holistic.FACE_CONNECTIONS
 mp_holistic.HAND_CONNECTIONS
 mp_holistic.POSE_CONNECTIONS
 를 각각 실행해보면 포함된 point와 connection들을 알 수 있습니다.
+
+  
+https://youtu.be/pG4sUNDOZFg
+"AI Face Body and Hand Pose Detection with Python and Mediapipe" by Nicholas Renotte
