@@ -1,0 +1,7 @@
+WrapperPykinect2 사용해 pykinect2에 tensorflow를 적용하는 방식으로,
+키넥트를 사용해 실시간 detection이 가능하다고 하는데 모듈 사용에 에러가 발생해서 실행해보지 못했습니다.
+
+두 개의 모듈 frame.py와 acquisitionKinect.py를 import한 main을 실행시키면 된다고 하는데 모듈 쪽에서 에러가 계속 납니다..
+
+https://github.com/gdubrg/wrapperPyKinect2     two modules
+https://blog.naver.com/jkl1435/221542347122    main code
