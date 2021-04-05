@@ -1,2 +1,0 @@
-https://youtu.be/pG4sUNDOZFg
-"AI Face Body and Hand Pose Detection with Python and Mediapipe" by Nicholas Renotte
