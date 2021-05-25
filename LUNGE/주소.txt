@@ -1,0 +1,5 @@
+SKELETON 80 16 0.0001
+https://teachablemachine.withgoogle.com/models/hvjbEoZZ6/
+
+IMAGE 50 16 0.001
+https://teachablemachine.withgoogle.com/models/QeITcQ_GY/
