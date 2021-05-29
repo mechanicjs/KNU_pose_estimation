@@ -9,10 +9,37 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/earlyaccess/notosanskr.css">
-    <title>Squat Trainer</title>
+    <title>AI Trainer</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+    <nav class="navbar navbar-expand navbar-dark bg-dark" aria-label="Second navbar example">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/">AI Trainer</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample02"
+                aria-controls="navbarsExample02" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarsExample02">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/">Squat</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="/hipBridge.html">Hip Bridge</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="/pullUp.html">Pull Up</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="/lunge.html">Lunge</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
     <div class="container mt-5">
         <div class="frame">
             <div class="center">
@@ -21,7 +48,8 @@
                 </div>
                 <div class="circle-big">
                     <div class="text">
-                        <span id="counter">0</span><div class="small">개</div>
+                        <span id="counter">0</span>
+                        <div class="small">개</div>
                     </div>
                     <svg>
                         <circle class="bg" cx="57" cy="57" r="52" />
@@ -30,9 +58,9 @@
                 </div>
             </div>
         </div>
-        <h1>Squat Trainer</h1><hr>
-        <p><--Look leftside</p>
-        <button class="btn btn-primary"type="button" onclick="init()">Start</button>
+        <h2>Squat</h2>
+        <hr>
+        <button class="btn btn-primary" type="button" onclick="init()">Start</button>
         <div><canvas id="canvas"></canvas></div>
         <div id="label-container"></div>
     </div>
@@ -54,7 +82,7 @@
         // https://github.com/googlecreativelab/teachablemachine-community/tree/master/libraries/pose
 
         // the link to your model provided by Teachable Machine export panel
-        const URL = "./my_model/";
+        const URL = "./my_model/squat";
         let model, webcam, ctx, labelContainer, maxPredictions;
 
         async function init() {
@@ -104,9 +132,9 @@
                     count++
                     var audio = new Audio('./my_voice/' + count % 10 + '.mp3');
                     audio.play();
-                    progress = progress-32.7
-                    if(progress <= 0) {
-                        progress = 327-32.7
+                    progress = progress - 32.7
+                    if (progress <= 0) {
+                        progress = 327 - 32.7
                     }
                     $('.progress').css('stroke-dashoffset', progress);
                     $('#counter').html(count);
@@ -114,7 +142,7 @@
                 status = "down"
             } else if (prediction[1].probability.toFixed(2) == 1.00) {
                 status = "up"
-            } 
+            }
             /*else if (prediction[2].probability.toFixed(2) == 1.00) {
                 if (status == "squat" || status == "stand") {
                     var audio = new Audio('./my_voice/bent.mp3');
