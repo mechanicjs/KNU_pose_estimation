@@ -9,6 +9,28 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <title>AI Trainer</title>
+    <style>
+        #hero {
+            position: relative;
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #hero::before {
+            content: "";
+            background-image: url('./image/home_training.jpg');
+            background-size: cover;
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            bottom: 0px;
+            left: 0px;
+            opacity: 0.75;
+        }
+    </style>
 </head>
 
 <body>
@@ -40,11 +62,11 @@
     </nav>
     <main>
 
-        <section class="py-5 text-center container">
+        <section id=hero class="py-5 text-center container">
             <div class="row py-lg-5">
                 <div class="col-lg-6 col-md-8 mx-auto">
                     <h1 class="fw-light">AI Home Trainer</h1>
-                    <p class="lead text-muted">Improve your physical health at home! </p>
+                    <p class="lead " style="color:rgb(255, 255, 255)">Improve your physical health at home! </p>
                 </div>
             </div>
         </section>
