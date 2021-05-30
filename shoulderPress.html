@@ -28,13 +28,13 @@
                         <a class="nav-link " href="hipBridge.html">Hip Bridge</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="lunge.html">Lunge</a>
+                        <a class="nav-link" aria-current="page" href="lunge.html">Lunge</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link " href="pullUp.html">Pull Up</a>
+                        <a class="nav-link" href="pullUp.html">Pull Up</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="shoulderPress.html">Shoulder Press</a>
+                        <a class="nav-link active" href="shoulderPress.html">Shoulder Press</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="squat.html">Squat</a>
@@ -61,7 +61,7 @@
                 </div>
             </div>
         </div>
-        <h2>Lunge</h2>
+        <h2>Shoulder Press</h2>
         <hr>
         <button class="btn btn-primary" type="button" onclick="init()">Start</button>
         <div><canvas id="canvas"></canvas></div>
@@ -85,7 +85,7 @@
         // https://github.com/googlecreativelab/teachablemachine-community/tree/master/libraries/pose
 
         // the link to your model provided by Teachable Machine export panel
-        const URL = "./my_model/lunge/";
+        const URL = "./my_model/shoulderPress/";
         let model, webcam, ctx, labelContainer, maxPredictions;
 
         async function init() {
