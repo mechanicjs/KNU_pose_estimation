@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="ko">
 
@@ -31,10 +32,10 @@
                         <a class="nav-link " href="/lunge.html">Lunge</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="/pullUp.html">Pull Up</a>
+                        <a class="nav-link " href="/pullUp.html">Pull Up</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/squat.html">Squat</a>
+                        <a class="nav-link active" aria-current="page" href="/squat.html">Squat</a>
                     </li>
                 </ul>
             </div>
@@ -58,7 +59,7 @@
                 </div>
             </div>
         </div>
-        <h2>Pull Up</h2>
+        <h2>Squat</h2>
         <hr>
         <button class="btn btn-primary" type="button" onclick="init()">Start</button>
         <div><canvas id="canvas"></canvas></div>
@@ -82,7 +83,7 @@
         // https://github.com/googlecreativelab/teachablemachine-community/tree/master/libraries/pose
 
         // the link to your model provided by Teachable Machine export panel
-        const URL = "./my_model/pullUp/";
+        const URL = "./my_model/squat/";
         let model, webcam, ctx, labelContainer, maxPredictions;
 
         async function init() {
@@ -127,7 +128,7 @@
             const { pose, posenetOutput } = await model.estimatePose(webcam.canvas);
             // Prediction 2: run input through teachable machine classification model
             const prediction = await model.predict(posenetOutput);
-            if (prediction[0].probability.toFixed(2) > 0.90) {
+            if (prediction[0].probability.toFixed(2) > 0.80) {
                 if (status == "up") {
                     count++
                     var audio = new Audio('./my_voice/' + count % 10 + '.mp3');
