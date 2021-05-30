@@ -44,6 +44,23 @@
         </div>
     </nav>
     <div class="container mt-5">
+        <div class="frame">
+            <div class="center">
+                <div class="headline">
+                    Counter
+                </div>
+                <div class="circle-big">
+                    <div class="text">
+                        <span id="counter">0</span>
+                        <div class="small">개</div>
+                    </div>
+                    <svg>
+                        <circle class="bg" cx="57" cy="57" r="52" />
+                        <circle class="progress" cx="57" cy="57" r="52" />
+                    </svg>
+                </div>
+            </div>
+        </div>
         <h2>Lunge</h2>
         <hr>
         <button class="btn btn-sm btn-outline-secondary" type="button" onclick="init()">Start</button>
@@ -95,28 +112,29 @@
                 window.requestAnimationFrame(loop);
             }
 
+            var progress = 327
+            var status = "ready"
+            var count = 0
             // run the webcam image through the image model
             async function predict() {
                 // predict can take in an image, video or canvas html element
                 const prediction = await model.predict(webcam.canvas);
-                if (prediction[0].probability.toFixed(2) > 0.80) {
-                    status = "bridge_down"
-                } else if (prediction[1].probability.toFixed(2) > 0.60) {
-                    if (status == "bridge_down") {
-
-
-                        count++;
-                        var audio = new Audio('./my_voice/' + count % 10 + '.mp3');
-                        audio.play();
-                        progress = progress - 32.7;
-                        if (progress <= 0) {
-                            progress = 327 - 32.7;
-                        }
-                        $('.progress').css('stroke-dashoffset', progress);
-                        $('#counter').html(count);
+                if (prediction[0].probability.toFixed(2) > 0.90) {
+                if (status == "down") {
+                    count++
+                    var audio = new Audio('./my_voice/' + count % 10 + '.mp3');
+                    audio.play();
+                    progress = progress - 32.7
+                    if (progress <= 0) {
+                        progress = 327 - 32.7
                     }
-                    status = "bridge_up"
+                    $('.progress').css('stroke-dashoffset', progress);
+                    $('#counter').html(count);
                 }
+                status = "ready"
+            } else if (prediction[1].probability.toFixed(2) == 1.00) {
+                status = "down"
+            }
                 const classPrediction =
                     prediction[0].className + ": " + (prediction[0].probability.toFixed(2) * 100).toFixed(0) + "%";
                 labelContainer.childNodes[0].innerHTML = prediction[0].className + ": " + "<div class='graph'><strong class='bar' style='width: " + (prediction[0].probability.toFixed(2) * 100).toFixed(0) + "%;'>" + (prediction[0].probability.toFixed(2) * 100).toFixed(0) + "%" + "</strong></div>";
