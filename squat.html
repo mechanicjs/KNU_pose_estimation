@@ -147,13 +147,6 @@
             } else if (prediction[1].probability.toFixed(2) == 1.00) {
                 status = "up"
             }
-            /*else if (prediction[2].probability.toFixed(2) == 1.00) {
-                if (status == "squat" || status == "stand") {
-                    var audio = new Audio('./my_voice/bent.mp3');
-                    audio.play();
-                }
-                status = "bent"
-            }*/
 
             const classPrediction =
                     prediction[0].className + ": " + (prediction[0].probability.toFixed(2)*100).toFixed(0) + "%";
