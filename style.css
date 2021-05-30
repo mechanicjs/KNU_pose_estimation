@@ -9,7 +9,7 @@
     border-radius: 2px;
     box-shadow: 1px 2px 10px 0px rgba(0, 0, 0, 0.3);
     overflow: hidden;
-    
+
 }
 
 .center {
@@ -131,4 +131,30 @@
 .circle-small .text .small {
     font-size: 12px;
     color: #648192;
+}
+
+.graph {
+    position: relative;
+    /* IE is dumb */
+    width: 200px;
+    border: 1px solid #03c203;
+    padding: 2px;
+    font-size: 11px;
+    font-family: tahoma;
+    margin-bottom: 3px;
+}
+
+.graph .bar {
+    display: block;
+    position: relative;
+    background: #03c203;
+    text-align: center;
+    color: #333;
+    height: 2em;
+    line-height: 2em;
+}
+
+.graph .bar span {
+    position: absolute;
+    left: 1em;
 }

@@ -63,7 +63,7 @@
         </div>
         <h2>Hip Bridge</h2>
         <hr>
-        <button class="btn btn-primary" type="button" onclick="init()">Start</button>
+        <button class="btn btn-sm btn-outline-secondary" type="button" onclick="init()">Start</button>
         <div><canvas id="canvas"></canvas></div>
         <div id="label-container"></div>
     </div>
@@ -153,11 +153,20 @@
                 }
                 status = "bent"
             }*/
-            for (let i = 0; i < maxPredictions; i++) {
-                const classPrediction =
-                    prediction[i].className + ": " + prediction[i].probability.toFixed(2);
-                labelContainer.childNodes[i].innerHTML = classPrediction;
-            }
+            // for (let i = 0; i < maxPredictions; i++) {
+            //     const classPrediction =
+            //         prediction[i].className + ": " + prediction[i].probability.toFixed(2);
+            //     labelContainer.childNodes[i].innerHTML = classPrediction;
+            // }
+
+            const classPrediction =
+                    prediction[0].className + ": " + (prediction[0].probability.toFixed(2)*100).toFixed(0) + "%";
+                labelContainer.childNodes[0].innerHTML = prediction[0].className + ": " + "<div class='graph'><strong class='bar' style='width: " + (prediction[0].probability.toFixed(2)*100).toFixed(0) +"%;'>" + (prediction[0].probability.toFixed(2)*100).toFixed(0) + "%" + "</strong></div>";
+
+            const classPrediction2 =
+                    prediction[1].className + ": " + (prediction[1].probability.toFixed(2)*100).toFixed(0) + "%";
+                labelContainer.childNodes[1].innerHTML = prediction[0].className + ": " + "<div class='graph'><strong class='bar' style='width: " + (prediction[1].probability.toFixed(2)*100).toFixed(0) + "%;'>" + (prediction[1].probability.toFixed(2)*100).toFixed(0) + "%" + "</strong></div>";
+
 
             // finally draw the poses
             //drawPose(pose);
