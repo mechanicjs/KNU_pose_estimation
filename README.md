@@ -1,3 +1,3 @@
 # Capture
-![실행화면](https://user-images.githubusercontent.com/33569961/116715481-b901c900-aa11-11eb-82a1-916a31f56619.JPG)
+![image](https://user-images.githubusercontent.com/33569961/120097029-5bc07b00-c169-11eb-857d-89117c447381.JPG)
 
