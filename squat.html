@@ -161,7 +161,7 @@
 
             const classPrediction2 =
                     prediction[1].className + ": " + (prediction[1].probability.toFixed(2)*100).toFixed(0) + "%";
-                labelContainer.childNodes[1].innerHTML = prediction[0].className + ": " + "<div class='graph'><strong class='bar' style='width: " + (prediction[1].probability.toFixed(2)*100).toFixed(0) + "%;'>" + (prediction[1].probability.toFixed(2)*100).toFixed(0) + "%" + "</strong></div>";
+                labelContainer.childNodes[1].innerHTML = prediction[1].className + ": " + "<div class='graph'><strong class='bar' style='width: " + (prediction[1].probability.toFixed(2)*100).toFixed(0) + "%;'>" + (prediction[1].probability.toFixed(2)*100).toFixed(0) + "%" + "</strong></div>";
 
             // finally draw the poses
             drawPose(pose);
