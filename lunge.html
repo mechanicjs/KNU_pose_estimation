@@ -9,7 +9,10 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/earlyaccess/notosanskr.css">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <title>AI Trainer - Lunge</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>    
+    <script type="text/javascript" src="stopwatch.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -44,7 +47,26 @@
         </div>
     </nav>
     <div class="container mt-5">
-
+        <div class="frame">
+            <div class="center">
+                <div class="headline">
+                    Timer
+                </div>
+                <br>
+                <div>
+                    <div id='box' class="box">
+                        <div id='timerBox' class="timerBox">
+                            <div id="time" class="time">00:00:00</div>
+                        </div>
+                        <div class="btnBox">
+                            <i id="startbtn" class="fa fa-play" aria-hidden="true"></i>
+                            <i id="pausebtn" class="fa fa-pause" aria-hidden="true"></i>
+                            <i id="stopbtn" class="fa fa-stop" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <h2>Lunge</h2>
         <hr>
         <button class="btn btn-sm btn-outline-secondary" type="button" onclick="init()">Start</button>
