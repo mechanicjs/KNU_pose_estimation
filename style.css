@@ -161,25 +161,15 @@
 
 .box{
     width: 200px;
-    height: 200px;
+    height: 100px;
 }
 .timerBox{
     width: 200px;
-    outline: 2px solid black;
+    outline: 2px solid #1b2a33;
 }
 .timerBox .time{
     font-size: 30pt;
     color: #4C4C4C;
     text-align: center;
     font-family: sans-serif;
-}
-.btnBox{
-    margin: 20px auto;
-    text-align: center;
-}
-.btnBox .fa{
-    margin: 0px 5px;
-    font-size: 30pt;
-    color: #27262e;
-    cursor: pointer;
 }
